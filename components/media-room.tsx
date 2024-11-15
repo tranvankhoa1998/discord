@@ -12,7 +12,7 @@ interface MediaRoomProps {
   audio: boolean;
 }
 
-export function MediaRoom({ chatId, video, audio }: MediaRoomProps) {
+export function MediaRoom({ chatId, video, audio }: MediaRoomProps)  {
   const { user } = useUser();
   const [token, setToken] = useState("");
 
@@ -22,7 +22,7 @@ export function MediaRoom({ chatId, video, audio }: MediaRoomProps) {
     (async () => {
       try {
         const response = await fetch(
-          `/api/livekit?room=${chatId}&username=${user.firstName}`
+          `/api/livekit?room=${chatId}&username=${user.firstName, user.lastName}`
         );
         const data = await response.json();
         setToken(data.token);
