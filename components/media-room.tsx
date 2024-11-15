@@ -39,7 +39,7 @@ export function MediaRoom({ chatId, video, audio }: MediaRoomProps)  {
         <p className="text-xs text-zinc-500 dark:text-zinc-400">
           Loading...
         </p>
-      </div>
+      </div>  
     );
 
   return (

@@ -100,7 +100,7 @@ export async function ServerSidebar({ serverId }: { serverId: string }) {
                 }))
               },
               {
-                label: "Video Channels",
+                label: " Channels",
                 type: "channel",
                 data: videoChannels?.map((channel) => ({
                   id: channel.id,
