@@ -122,23 +122,10 @@ model DirectMessage {
   member         Member       @relation(fields: [memberId], references: [id], onDelete: Cascade)
   conversation   Conversation @relation(fields: [conversationId], references: [id], onDelete: Cascade)
 
-  deleted Boolean @default(false)
 
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
 
   @@index([memberId])
   @@index([conversationId])
 }
 
-enum MemberRole {
-  ADMIN
-  MODERATOR
-  GUEST
-}
 
-enum ChannelType {
-  TEXT
-  AUDIO
-  VIDEO
-}
